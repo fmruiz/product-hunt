@@ -9,11 +9,6 @@ export const Layout = (props) => {
     <Fragment>
       <Global
         style={css`
-          :root {
-            --gray: #3d3d3d;
-            --gray2: #6f6f6f;
-            --orange: #da552f;
-          }
           html {
             font-size: 62.5%;
             box-sizing: border-box;

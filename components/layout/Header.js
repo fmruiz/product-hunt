@@ -2,9 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styled from "@emotion/styled";
+import { css } from "@emotion/react";
 
 import { Search } from "../ui/Search";
 import { Navigation } from "./Navigation";
+import { Button } from "../ui/Button";
 
 import Logo from "../../public/static/img/logo.png";
 
@@ -38,12 +40,27 @@ export const Header = () => {
           <Navigation />
         </div>
 
-        <div>
-          <p>Hey Franco!</p>
+        <div
+          css={css`
+            display: flex;
+            align-items: center;
+          `}
+        >
+          <p
+            css={css`
+              margin-right: 2rem;
+            `}
+          >
+            Hey Franco!
+          </p>
 
-          <button type="button">Log out</button>
-          <Link href="/">Sign In</Link>
-          <Link href="/">Sign Up</Link>
+          <Button bgColor>Log out</Button>
+          <Link href="/" passHref>
+            <Button bgColor>Sign In</Button>
+          </Link>
+          <Link href="/" passHref>
+            <Button>Sign Up</Button>
+          </Link>
         </div>
       </Container>
     </HeaderContainer>

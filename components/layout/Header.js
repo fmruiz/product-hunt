@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styled from "@emotion/styled";
@@ -27,6 +27,8 @@ const Container = styled.div`
 `;
 
 export const Header = () => {
+  const user = true;
+
   return (
     <HeaderContainer>
       <Container>
@@ -46,21 +48,27 @@ export const Header = () => {
             align-items: center;
           `}
         >
-          <p
-            css={css`
-              margin-right: 2rem;
-            `}
-          >
-            Hey Franco!
-          </p>
-
-          <Button bgColor>Log out</Button>
-          <Link href="/" passHref>
-            <Button bgColor>Sign In</Button>
-          </Link>
-          <Link href="/" passHref>
-            <Button>Sign Up</Button>
-          </Link>
+          {user ? (
+            <Fragment>
+              <p
+                css={css`
+                  margin-right: 2rem;
+                `}
+              >
+                Hey Franco!
+              </p>
+              <Button bgColor>Log out</Button>
+            </Fragment>
+          ) : (
+            <Fragment>
+              <Link href="/" passHref>
+                <Button bgColor>Sign In</Button>
+              </Link>
+              <Link href="/" passHref>
+                <Button>Sign Up</Button>
+              </Link>
+            </Fragment>
+          )}
         </div>
       </Container>
     </HeaderContainer>

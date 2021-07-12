@@ -17,7 +17,7 @@ const HeaderContainer = styled.header`
 `;
 
 const Container = styled.div`
-  max-width: 1200px;
+  /* max-width: 1200px; */
   width: 95%;
   margin: 0 auto;
   @media (min-width: 768px) {
@@ -36,6 +36,7 @@ export const Header = () => {
           css={css`
             display: flex;
             align-items: center;
+            justify-content: space-between;
           `}
         >
           <Link href="/" passHref>

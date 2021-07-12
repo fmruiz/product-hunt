@@ -3,9 +3,10 @@ import styled from "@emotion/styled";
 
 const InputText = styled.input`
   border: 1px solid ${(props) => props.theme.colors.gray3};
-  padding: 1rem;
+  padding: 0.8rem;
   min-width: 300px;
   border-radius: ${(props) => props.theme.borderRadius.border1};
+  margin-left: 2rem;
 `;
 
 // const InputSubmit = styled.button`

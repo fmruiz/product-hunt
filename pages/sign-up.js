@@ -1,4 +1,6 @@
 import React, { Fragment } from "react";
+import { css } from "@emotion/react";
+
 import { Layout } from "../components/layout/Layout";
 import { Form, Field, InputSubmit } from "../components/ui/Form";
 
@@ -7,7 +9,14 @@ const SignUp = () => {
     <div>
       <Layout>
         <Fragment>
-          <h1>SignUp</h1>
+          <h1
+            css={css`
+              text-align: center;
+              margin-top: 5rem;
+            `}
+          >
+            SignUp
+          </h1>
           <Form>
             <Field>
               <label htmlFor="name">Name</label>

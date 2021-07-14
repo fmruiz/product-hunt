@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Layout } from "../components/layout/Layout";
-import { Form } from "../components/ui/Form";
+import { Form, Field, InputSubmit } from "../components/ui/Form";
 
 const SignUp = () => {
   return (
@@ -9,7 +9,7 @@ const SignUp = () => {
         <Fragment>
           <h1>SignUp</h1>
           <Form>
-            <div>
+            <Field>
               <label htmlFor="name">Name</label>
               <input
                 type="text"
@@ -17,8 +17,8 @@ const SignUp = () => {
                 placeholder="Add your name"
                 name="name"
               />
-            </div>
-            <div>
+            </Field>
+            <Field>
               <label htmlFor="email">Email</label>
               <input
                 type="email"
@@ -26,8 +26,8 @@ const SignUp = () => {
                 placeholder="Add your email"
                 name="email"
               />
-            </div>
-            <div>
+            </Field>
+            <Field>
               <label htmlFor="password">Password</label>
               <input
                 type="password"
@@ -35,8 +35,8 @@ const SignUp = () => {
                 placeholder="Add your password"
                 name="password"
               />
-            </div>
-            <input type="submit" value="Create Account" />
+            </Field>
+            <InputSubmit type="submit" value="Create Account" />
           </Form>
         </Fragment>
       </Layout>

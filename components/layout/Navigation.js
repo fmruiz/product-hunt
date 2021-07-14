@@ -21,9 +21,9 @@ export const Navigation = () => {
   return (
     <Nav>
       <Link href="/">Home</Link>
-      <Link href="/">Ranking</Link>
-      <Link href="/">New Product</Link>
-      <Link href="/">About</Link>
+      <Link href="/ranking">Ranking</Link>
+      <Link href="/new-product">New Product</Link>
+      <Link href="/about">About</Link>
     </Nav>
   );
 };

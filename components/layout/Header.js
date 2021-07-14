@@ -27,7 +27,7 @@ const Container = styled.div`
 `;
 
 export const Header = () => {
-  const user = true;
+  const user = false;
 
   return (
     <HeaderContainer>
@@ -67,10 +67,10 @@ export const Header = () => {
             </Fragment>
           ) : (
             <Fragment>
-              <Link href="/" passHref>
+              <Link href="/login" passHref>
                 <Button bgColor>Sign In</Button>
               </Link>
-              <Link href="/" passHref>
+              <Link href="/sign-up" passHref>
                 <Button>Sign Up</Button>
               </Link>
             </Fragment>
